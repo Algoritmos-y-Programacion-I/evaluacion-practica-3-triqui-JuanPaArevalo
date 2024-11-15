@@ -77,7 +77,7 @@ public class Executable {
         int columna = reader.nextInt();
 
         if(cont.verificarLaJugada(fila, columna)) {
-            cont.addJuagadaHumano(fila, columna);
+            cont.jugadaDeHumano(fila, columna);
         } else {
             System.out.println("Lo siento, este lugar ya esta lleno.");
         }
