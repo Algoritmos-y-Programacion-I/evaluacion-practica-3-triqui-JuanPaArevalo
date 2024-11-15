@@ -70,9 +70,26 @@ public class Executable {
 
     private void jugadaHumano() {
         // Implementación de jugada de humano
+
+        System.out.println("Por favor ingrese la fila en la que quiere poner su O: ");
+        int fila = reader.nextInt();
+        System.out.println("Por favor ingrese la colmuna en la que quiere poner su O: ");
+        int columna = reader.nextInt();
+
+        if(cont.verificarLaJugada(fila, columna)) {
+            cont.addJuagadaHumano(fila, columna);
+        } else {
+            System.out.println("Lo siento, este lugar ya esta lleno.");
+        }
+        
     }
 
     private void validarGanador() {
         // Implementación de la validación si alguien ya ganó el triqui
+        if(cont.verificarGanador()) {
+            System.out.println("Ya existe un ganador");
+        } else {
+            System.out.println("Aun no hay un ganador");
+        }
     }
 }
